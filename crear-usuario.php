@@ -143,7 +143,7 @@
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
                             <i class="fa fa-bell me-lg-2"></i>
-                            <span class="d-none d-lg-inline-flex">Notification</span>
+                            <span class="d-none d-lg-inline-flex">Notificatin</span>
                         </a>
                         <div class="dropdown-menu dropdown-menu-end bg-secondary border-0 rounded-0 rounded-bottom m-0">
                             <a href="#" class="dropdown-item">
@@ -187,32 +187,33 @@
                         <div class="d-flex align-items-center justify-content-between mb-4">
                             <h6 class="mb-0">Usuarios</h6>
                         </div>
-                        <div class="d-flex mb-2">
-                            <input class="form-control bg-transparent" type="text" placeholder="Buscar...">
-                            <a href="./crear-usuario.php" class="btn btn-primary ms-2">Add</a>
-                        </div>
-                        <table class="table table-hover table-stripped-columns">
-                            <thead>
-                                <tr class="table-active">
-                                    <th>Documento</th>
-                                    <th>Nombre</th>
-                                    <th>Telefono</th>
-                                    <th>Correo</th>
-                                    <th>Perfil</th>
-                                    <th>Acciones</th>
-                                </tr>
-                            </thead>
-                            <tbody class="table-group-divider">
-                                <tr>
-                                    <td>aa-a</td>
-                                    <td>aa</td>
-                                    <td>1111</td>
-                                    <td>aa@aa.aa</td>
-                                    <td>Admin</td>
-                                    <td>Iconos</td>
-                                </tr>
-                            </tbody>
-                        </table>
+                        <form action="./controller/controller.crear.php" method="post">
+                            <div class="row mb-3">
+                                <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
+                                <div class="col-sm-10">
+                                    <input type="email" name="email" class="form-control" id="inputEmail3">
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
+                                <div class="col-sm-10">
+                                    <input type="password" name="passw" class="form-control" id="inputPassword3">
+                                </div>
+                            </div>
+                            <fieldset class="row mb-3">
+                                <legend class="col-form-label col-sm-2 pt-0">Perfil</legend>
+                                <div class="col-sm-10">
+                                    <div class="form-check">
+                                        <select class="form-select form-select-lg mb-3">
+                                            <option selected>Open this select menu</option>
+                                            <option value="1">admin</option>
+                                            <option value="2">operador</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </fieldset>
+                            <button type="submit" class="btn btn-primary">Crear</button>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -242,8 +243,20 @@
         <!-- Back to Top -->
         <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
     </div>
-    <?php include('lib/libreria-js.php'); ?>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/chart/chart.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/tempusdominus/js/moment.min.js"></script>
+    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
 </body>
 
 </html>
-
