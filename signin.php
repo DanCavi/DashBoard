@@ -71,8 +71,8 @@
                         </div>
                         <div class="d-flex align-items-center justify-content-between mb-4">
                             <div class="form-check">
-                                <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                                <input type="checkbox" name="cook" class="form-check-input" id="exampleCheck1">
+                                <label class="form-check-label" for="exampleCheck1">No cerrar sesión</label>
                             </div>
                         </div>
                         <button type="submit" class="btn btn-primary py-3 w-100 mb-4">Sign In</button>

@@ -29,9 +29,15 @@ if (empty($email) || empty($passw)) {
         header("Location: ./../signin.php?error=Usuario incorrecto");
         exit();
     } else {
+
+        if (isset($_POST['cook'])) {
+            session_set_cookie_params(604800);
+        }
+        
         $columna = mysqli_fetch_assoc($resultado);
         $rolArr = mysqli_fetch_assoc($resRol);
         
+
         $_SESSION['email'] = $columna['email'];
         $_SESSION['nombre'] = $columna['name'];
         $_SESSION['id'] = $columna['id'];

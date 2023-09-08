@@ -19,6 +19,7 @@ if (isset($_POST['email']) && isset($_POST['passw'])) {
         exit();
     } else {
 
+
         $query = "insert into usuarios (name, rut, email, password) values ('default', '11-1', '$email', '$passw')";
         header("Location: ./../crear-usuario.php?error=$query");
         mysqli_query($query, $conexion);
